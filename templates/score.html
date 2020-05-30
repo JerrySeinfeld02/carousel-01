@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="FutureSee" class="display-4">Begin Your Scoring</h1>
+            <p class="lead">Score a teams perfornance.</p>
+        </div>
+    </div>
+
+    <div class="container">
+       <div class="dropdown">
+           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-togle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+               Select a team to score
+           </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               {% for item in char_list %}
+                    <a class="dropdown-item" href="{{ url_for('scores', id=item[0])}}">{{ item[1]}}</a>
+               {% enfor %}
+           </div>
+       </div>
+
+
+
+
+
+
+
+
+
+        <div class="col-md-10 order-md-1">
+            <h4 class="mb-3">Character details</h4>
+            <form>
+                <div class="col-md-3 mb-3">
+                    <label for="charID">Character ID</label>
+                    <input type="text" class="form-control" id="charID" placeholder="" value="{{ charID }}" disabled
+                           name="charID">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" id="Name" placeholder="" value="{{ name }}" name="name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="homeworld">Homeworld</label>
+                        <input type="text" class="form-control" id="homeworld" placeholder="" value="{{ homeworld }}"
+                               name="homeworld">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="height">Height</label>
+                        <input type="text" class="form-control" id="height" placeholder="" value="{{ height }}"
+                               name="height">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="mass">Mass</label>
+                        <input type="text" class="form-control" id="mass" placeholder="" value="{{ mass }}" name="mass">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="hair_colour">Hair colour</label>
+                        <input type="text" class="form-control" id="hair_colour" placeholder=""
+                               value="{{ hair_colour }}"
+                               name="hair_colour">
+                    </div>
+                    <div class="col">
+                        <label for="skin_colour">Skin colour</label>
+                        <input type="text" class="form-control" id="skin_colour" placeholder=""
+                               value="{{ skin_colour }}"
+                               name="skin_colour">
+                    </div>
+                    <div class="col">
+                        <label for="eye_colour">Eye colour</label>
+                        <input type="text" class="form-control" id="eye_colour" placeholder="" value="{{ eye_colour }}"
+                               name="eye_colour">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="gender">Gender</label>
+                        <input type="text" class="form-control" id="gender" placeholder="" value="{{ gender }}"
+                               name="gender">
+                    </div>
+                    <div class="col">
+                        <label for="birth_year">Birth year</label>
+                        <input type="text" class="form-control" id="birth_year" placeholder="" value="{{ birth_year }}"
+                               name="birth_year">
+                    </div>
+                    <div class="col">
+                        <label for="species">Species</label>
+                        <input type="text" class="form-control" id="species" placeholder="" value="{{ species }}"
+                               name="species">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pic_link">Character image link</label>
+                    <input type="email" class="form-control" id="pic_link" placeholder="" name="pic_link">
+                </div>
+
+                <div class="form-group">
+                    <label for="char_description">Character description</label>
+                    <textarea class="form-control" id="char_description" rows="3" name="char_description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Kill!</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Search Page</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="/static/logo.jpg/" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col">
+                <h3>{{ name_first }} {{ name_last }}</h3>
+                <h4> from {{ team }}</h4>
+                <h5>competed in the {{ category }} event in {{ year }}</h5>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}

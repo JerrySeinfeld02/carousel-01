@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="FutureSee" class="display-4">Delete a team</h1>
+            <p class="lead">Remove a team from the RoboCupJr events</p>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 order-md-1">
+            <h4 class="mb-3">Character details</h4>
+            <form action="http://localhost:5000/admin/delete_success" method="post">
+                <div class="col-md-3 mb-3">
+                    <label for="id">id</label>
+                    <input type="text" class="form-control" id="id" placeholder="" value="{{ id }}" name="id">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Team">Team</label>
+                        <input type="text" class="form-control" id="Team" placeholder="" value="{{ team }}" name="team">
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

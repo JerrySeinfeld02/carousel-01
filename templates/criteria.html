@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Criteria Page</h1>
+        <p class="lead">This page identifies the criteria that must be met in order to achieve the highest possible
+            score in events</p>
+        <hr class="my-4">
+    </div>
+
+    <div class="container" style="margin-top: 80px ">
+
+
+        <!--  Start of table   -->
+        <h1>RCJA OnStage performanece Technical interview Score Sheet</h1>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Characteristic</th>
+                <th scope="col">Mark</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Programming</th>
+                <td><p>-Using Programming language appropriate to level of expertise (3)</p>
+                    <p>-Creating innovative programming solution2 (2)</p>
+                    <p>-Developing Libraries that call functions (3)</p>
+                    <p>-Presence of Algorithmic thinking (3)</p></td>
+                <td>/12</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Innovation & Originality</th>
+                <td><p>-Design and construction largely students's own (4)</p>
+                    <p>-Innovative technologies are used (4)</p>
+                </td>
+                <td>/8</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Robotic Communication & Interaction</th>
+                <td><p>-Equipped with a communication function to achieve robot-robot interation (4)</p>
+                    <p>-Equipped with sensors to achieve robot-human or robot-robot interaction (4)</p></td>
+                <td>/8</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Electronic Hardware</th>
+                <td><P>-Electronics developed/home built (4)</P>
+                    <P>-Innovative se of technologies (e.g., camera, speed/motor controllers, GPS, different
+                        micro-controllers, etc.) (2)</P>
+                    <P>-Innovative use of sensors/integration of sensors (4)</P></td>
+                <td>/10</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Evidence of Authenticity</th>
+                <td><p>-Able to explain how the mechanical systems / electronics work (2)</p>
+                    <p>-explain decisions made and any limitations of the electronics (2)/p>
+                    <p>-Demonstrated the capabilities of the robot(s) (2)</p>
+                    <p>-Demonstrated an understanding of how the communication is occurring (2) </p>
+                    <p>-Able to explain hpw the program works and interactions between the hardware and software (2)</p>
+                    <p>-Evidence of evolution through participation in robotics (e.g. evidenced through the
+                        journal)(2)</p>
+                </td>
+                <td>/12</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Deductions (at discretion of judges, up to 20)</th>
+                <td><p>-Judges should satisfy themselves that this is the work of the students</p>
+                    <p>-Originality of robot software and hardware (no re-use from previous competitions</p>
+                    <p>-ALl team members are able to discuss their technical involvement </p>
+                </td>
+                <td>/20</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Total Score</th>
+                <td>
+                </td>
+                <td>/50</td>
+            </tr>
+
+            </tbody>
+        </table>
+        <!------END of first table --->
+        <h1>RCJA OnStage Performance Score Sheet</h1>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Characteristic</th>
+                <th scope="col">Mark</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Quality of the whole performance</th>
+                <td><p>-Non-repetitive robot movements and/or a varied robot performance moving around the stage area
+                    (4)</p>
+                    <p>There is a link, or common theme demonstrated in the whole performance (2)</p>
+                    <p>Visual Impact and creativity (4)</p>
+                    <p>Home-built robot costumes complement the performance and are engaging (2)</p>
+                    <p>A performance that is engaging and thorough (4)</p>
+                    <p>Creative use of stage area (4)</p>
+                    <p>Only robots and up to two stage permormers are allowed on stage at one time</p>
+                    <p>Use of props or scenery on the stage is allowed only when used for interaction with the robot</p>
+                </td>
+                <td>/20</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Robot's Movements</th>
+                <td><p>-Reliable robots that do not fall part and ork as expected for the duration of the performance
+                    (3)</p>
+                    <p>-Risky movements by robots (e.g. Robot(s) can balance itself) (4)</p>
+                    <p>Fluid movements similar to humans (4)</p>
+                    <p>Synchronization between robots (4)</p>
+                </td>
+                <td>/15</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Sensor & Interactions</th>
+                <td><p>-Sensors that are used "Add value" to the performance (3)</p>
+                    <p>-Sensors are sued in innovative ways (3)</p>
+                    <p>-Communication between robots to develop the performance (3)</p>
+                    <p>-Planned human-robot interaction (3)</p>
+                    <p>-Interaction between props and robots (e.g. Robot(s) can avoid hitting unexpected objects)
+                        (3)</p>
+                    <p>Novice: The use of line tracking robots will not be rewarded highly </p>
+                    <p>Experienced: No line or mats are allowed on stage </p>
+                </td>
+                <td>/15</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Deductions</th>
+                <td><p>-Each unplanned human intervention (-1)</p>
+                    <p>-Each Restart (-1) (Max 2)</p>
+                    <p>-Allotted time (-1) for each 10 seconds home</p>
+                    <p>-Each infraction of boundary (-1)</p>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th scope="row">Total Score</th>
+                <td></td>
+                <td>/50</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+{% endblock content %}

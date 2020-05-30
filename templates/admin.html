@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Judges Tool</h1>
+        <p class="lead"> Score the performances of the RoboCupJr events</p>
+        <hr class="my-4">
+    </div>
+
+    <div class="card-group">
+        <div class="card">
+            <a href=""><img class="card-img-top"
+                            src="https://www.robocupjunior.org.au/themes/rcja/images/rcja_front8.jpg"
+                            alt="Card image cap"></a>
+            <div class="card-body">
+                <h5 class="card-title">Scoring</h5>
+                <p class="card-text">Today the dancing event is being scored. Here these scores can be entered.</p>
+                <p class="card-text">
+                    <small class="text-muted"></small>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <a><img class="card-img-top" src="https://www.robocupjunior.org.au/themes/rcja/images/rcja_front6.jpg"
+                    alt="Card image cap"></a>
+            <div class="card-body">
+                <h5 class="card-title">Add Team Member</h5>
+                <p class="card-text"> Uh oh ... a new team forgot to register on the RobobCupJr website! fortunatley,
+                    any judge can make these changes.</p>
+                <p class="card-text">
+                    <small class="text-muted"></small>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="{{ url_for("admin_delete") }}"><img class="card-img-top" src="https://www.robocupjunior.org.au/themes/rcja/images/rcja_front11.jpg"
+                    alt="Card image cap"></a>
+            <div class="card-body">
+                <h5 class="card-title">Remove Team</h5>
+                <p class="card-text">Here removals can be made from the teams table</p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}
