@@ -156,10 +156,10 @@ def character_delete_success():
         return render_template('admin.html')
 
 
-@app.route('/admin/delete')
-def admin_delete():
-    char_list = char_lister
-    id, team, score = query_profile_full(6)
+@app.route('/admin/delete/<id>')
+def admin_delete(id):
+    char_list = char_lister()
+    id, team, score = query_profile_full(id)
     return render_template('character_delete.html',
                            id=id,
                            team=team,
