@@ -92,7 +92,6 @@ def teams_page():
     return render_template('teams.html', output=teams_results)
 
 
-
 def teams_page_table():
     connie = sqlite3.connect('robocupjr.db')
     c = connie.cursor()
@@ -129,7 +128,6 @@ def log_me_out():
     return render_template('logout.html')
 
 
-
 @app.route('/register')
 def register_page():
     return render_template('register.html')
@@ -142,28 +140,39 @@ def admin_page():
     else:
         return render_template('login.html')
 
+
 #
 # @app.route('/admin/scoring/<scrid>')
 # def scoring_page(scrid):
 #     scr_list = scr_lister()
 #     return render_template('score.html')
-@app.route('/admin/delete_success', methods = ['GET', 'POST'])
+@app.route('/admin/delete_success', methods=['GET', 'POST'])
 def character_delete_success():
     if request.method == 'POST':
         id = request.form['id']
         team_delete(id)
         return render_template('character_delete_success.html')
     else:
-        return render_template ('admin.html')
+        return render_template('admin.html')
+
 
 @app.route('/admin/delete')
 def admin_delete():
+    char_list = char_lister
     id, team, score = query_profile_full(6)
     return render_template('character_delete.html',
                            id=id,
                            team=team,
-                           score=score
+                           score=score,
+                           char_list=char_list
                            )
+# a functyion that lists all the id and team names currently existing in the dancingscores table
+def char_lister():
+    connie = sqlite3.connect('robocupjr.db')
+    c = connie.cursor()
+    c.execute("SELECT id, team FROM dancingscores ORDER BY id")
+    char_list = c.fetchall()
+    return char_list
 
 
 def query_profile_full(id):
@@ -173,13 +182,11 @@ def query_profile_full(id):
     id, team, score = c.fetchone()
     return (id, team, score)
 
+
 def team_delete(id):
     connie = sqlite3.connect('robocupjr.db')
     c = connie.cursor()
-    c.execute("DELETE FROM dancingscores WHERE id =?",(id,))
-
-
-
+    c.execute("DELETE FROM dancingscores WHERE id =?", (id,))
 
 
 @app.route('/register/team_add', methods=['GET', 'POST'])
